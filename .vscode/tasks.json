@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Snapshot & Push",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "git add .; git commit -m \"Snapshot: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')\"; git push"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+} 
