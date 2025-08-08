@@ -7,7 +7,7 @@
       "command": "bash",
       "args": [
         "-c",
-        "git add . && git commit -m \"Snapshot: $(date \\\"+%Y-%m-%d %H:%M:%S\\\")\" && git push"
+        "git add . && git commit -m \"Snapshot: $(date +%Y-%m-%d\\ %H:%M:%S)\" && git push"
       ],
       "problemMatcher": [],
       "group": {
