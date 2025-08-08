@@ -6,8 +6,11 @@
       "type": "shell",
       "command": "powershell",
       "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
         "-Command",
-        "git add .; git commit -m \"Snapshot: $(Get-Date -Format \\\"yyyy-MM-dd HH:mm:ss\\\")\"; git push"
+        "$date = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'; git add .; git commit -m \"Snapshot: $date\"; git push"
       ],
       "problemMatcher": [],
       "group": {
